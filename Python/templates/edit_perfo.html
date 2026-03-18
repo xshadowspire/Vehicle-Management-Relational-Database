@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="container py-5">
+    <div class="card p-4 shadow mx-auto" style="max-width: 600px;">
+        <h2 class="text-warning mb-4 text-center">📝 Modifică Specificații</h2>
+        <form action="/update_perfo" method="POST">
+            <input type="hidden" name="id" value="{{p.idperfo}}">
+            <div class="row mb-3">
+                <div class="col"><label class="fw-bold">ID Șofer</label><input type="number" name="ids" value="{{p.idsofer}}" class="form-control"></div>
+                <div class="col"><label class="fw-bold">ID Vehicul</label><input type="number" name="idv" value="{{p.idvehicul}}" class="form-control"></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col"><label class="fw-bold">CP</label><input type="number" name="hp" value="{{p.cai_putere}}" class="form-control"></div>
+                <div class="col"><label class="fw-bold">Nm</label><input type="number" name="nm" value="{{p.cuplu_nm}}" class="form-control"></div>
+                <div class="col"><label class="fw-bold">Kg</label><input type="number" name="kg" value="{{p.greutate_kg}}" class="form-control"></div>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success fw-bold">💾 Salvează</button>
+                <a href="/performante" class="btn btn-outline-secondary">Anulează</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
